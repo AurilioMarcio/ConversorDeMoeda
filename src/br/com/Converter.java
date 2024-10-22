@@ -22,16 +22,16 @@ public class Converter {
                     .uri(URI.create(url))
                     .build();
 
-            // Enviar requisição e obter resposta
+            // Envia requisição e obter resposta
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-            // Imprimir a resposta completa da API para depuração
+            // Imprimi a resposta completa da API para depuração
             System.out.println("URL usada para a requisição: " + url);
             System.out.println("Resposta da API: " + response.body());
 
-            // Verificar se a resposta é válida
+            // Verifica se a resposta é válida
             if (response.statusCode() == 200) {
-                // Analisar a resposta JSON
+                // Analisa a resposta JSON
                 JsonElement jsonElement = JsonParser.parseString(response.body());
                 if (jsonElement.isJsonObject()) {
                     JsonObject jsonResponse = jsonElement.getAsJsonObject();

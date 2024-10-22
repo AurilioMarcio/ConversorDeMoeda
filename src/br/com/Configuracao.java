@@ -7,7 +7,7 @@ public class Configuracao {
     // URL base da API
     public static final String API_URL = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/latest/";
 
-    // Método para obter a URL completa com a moeda base
+    // Metodo para obter a URL completa com a moeda base
     public static String getApiUrl(String moedaBase) {
         return API_URL + moedaBase;
     }

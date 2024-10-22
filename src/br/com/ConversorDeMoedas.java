@@ -1,3 +1,5 @@
+package br.com;
+
 import java.util.Scanner;
 
 import br.com.Converter;
@@ -52,11 +54,11 @@ public class ConversorDeMoedas {
                 return;
         }
 
-        // Instanciar o serviço de conversão
+        // Instancia o serviço de conversão
         Converter service = new Converter();
         JsonObject taxas = service.obterTaxasDeCambio(moedaBase);
 
-        // Exibir a taxa de conversão
+        // Exibe a taxa de conversão
         if (taxas != null && taxas.has(moedaAlvo)) {
             System.out.println("A taxa de câmbio de " + moedaBase + " para " + moedaAlvo + " é: " + taxas.get(moedaAlvo).getAsDouble());
         } else {
