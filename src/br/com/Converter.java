@@ -26,8 +26,8 @@ public class Converter {
             HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
             // Imprimi a resposta completa da API para depuração
-            System.out.println("URL usada para a requisição: " + url);
-            System.out.println("Resposta da API: " + response.body());
+            //System.out.println("URL usada para a requisição: " + url);
+            //System.out.println("Resposta da API: " + response.body());
 
             // Verifica se a resposta é válida
             if (response.statusCode() == 200) {
